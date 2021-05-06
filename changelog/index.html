@@ -1,0 +1,841 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="prev" title="Toolchain documentation" href="../toolchain/" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><meta name="generator" content="sphinx-3.5.3, furo 2021.04.11.beta34"/>
+        <title>Changelog - Beet documentation</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mudkip_furo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mudkip_furo.css" />
+    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Beet documentation</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search/">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/">General overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchain/">Toolchain documentation</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Project links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mcbeet/beet">GitHub Repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pypi.org/project/beet">PyPI Package</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<!--next-version-placeholder-->
+<div class="section" id="v0-22-3-2021-05-05">
+<h2>v0.22.3 (2021-05-05)<a class="headerlink" href="#v0-22-3-2021-05-05" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fix">
+<h3>Fix<a class="headerlink" href="#fix" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add defaults for everything (<a class="reference external" href="https://github.com/mcbeet/beet/commit/f229b3c2bcba413008600fc38116ad0eede95eee"><code class="docutils literal notranslate"><span class="pre">f229b3c</span></code></a>)</p></li>
+<li><p>Tweak pack and namespace equality (<a class="reference external" href="https://github.com/mcbeet/beet/commit/5906fb2e6632a845ffe6364c9785ba02ee80ea20"><code class="docutils literal notranslate"><span class="pre">5906fb2</span></code></a>)</p></li>
+<li><p>Rename pack image (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a3007a158875178b064aae50b384871c6f31adc7"><code class="docutils literal notranslate"><span class="pre">a3007a1</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Start writing general overview (<a class="reference external" href="https://github.com/mcbeet/beet/commit/fd9348d11f7d7513ce0fd3e31864a5216880f047"><code class="docutils literal notranslate"><span class="pre">fd9348d</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-22-2-2021-05-04">
+<h2>v0.22.2 (2021-05-04)<a class="headerlink" href="#v0-22-2-2021-05-04" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Fix<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use custom PathLike (<a class="reference external" href="https://github.com/mcbeet/beet/commit/b569367f472e4d95f1c28dc3162a49be06b602e4"><code class="docutils literal notranslate"><span class="pre">b569367</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Documentation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Update README (<a class="reference external" href="https://github.com/mcbeet/beet/commit/ab8056b8c186460a59d969faa1a81af322954421"><code class="docutils literal notranslate"><span class="pre">ab8056b</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-22-1-2021-05-02">
+<h2>v0.22.1 (2021-05-02)<a class="headerlink" href="#v0-22-1-2021-05-02" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Fix<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Keep template globals across environment resets (<a class="reference external" href="https://github.com/mcbeet/beet/commit/02379e2f1e7b043e02b570e41ce05b1d6ab2cd87"><code class="docutils literal notranslate"><span class="pre">02379e2</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-22-0-2021-04-27">
+<h2>v0.22.0 (2021-04-27)<a class="headerlink" href="#v0-22-0-2021-04-27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="feature">
+<h3>Feature<a class="headerlink" href="#feature" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Make it possible to temporarily disable folding (<a class="reference external" href="https://github.com/mcbeet/beet/commit/489ad7c65643c14633358396389dedc7d96a4d8d"><code class="docutils literal notranslate"><span class="pre">489ad7c</span></code></a>)</p></li>
+<li><p>Add particles (<a class="reference external" href="https://github.com/mcbeet/beet/commit/adaaf0d9fbdd69bbfde42a3cf24c632b0c135d36"><code class="docutils literal notranslate"><span class="pre">adaaf0d</span></code></a>)</p></li>
+<li><p>Add sounds (<a class="reference external" href="https://github.com/mcbeet/beet/commit/6d88263228174fa21d594398210c026d00a7130e"><code class="docutils literal notranslate"><span class="pre">6d88263</span></code></a>)</p></li>
+<li><p>Add namespace extra (<a class="reference external" href="https://github.com/mcbeet/beet/commit/bd7b1480df469fdeaf1a9ce1bf6b27051e758c24"><code class="docutils literal notranslate"><span class="pre">bd7b148</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-21-0-2021-04-23">
+<h2>v0.21.0 (2021-04-23)<a class="headerlink" href="#v0-21-0-2021-04-23" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Feature<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Expose generate_path in templates (<a class="reference external" href="https://github.com/mcbeet/beet/commit/9354b78a3fe73d513e0b3a287d6fd0c7944d13b2"><code class="docutils literal notranslate"><span class="pre">9354b78</span></code></a>)</p></li>
+<li><p>Add generate.function_tree() (<a class="reference external" href="https://github.com/mcbeet/beet/commit/f9aac53c2d1c46076faf270bad85317a9f856911"><code class="docutils literal notranslate"><span class="pre">f9aac53</span></code></a>)</p></li>
+<li><p>Add TreeNode.root (<a class="reference external" href="https://github.com/mcbeet/beet/commit/0f0078f8b182cf9df492e1281727b3d686e33865"><code class="docutils literal notranslate"><span class="pre">0f0078f</span></code></a>)</p></li>
+<li><p>Add generate.path() (<a class="reference external" href="https://github.com/mcbeet/beet/commit/80d26892a42fd6c7052f3041659bafbab7957b4f"><code class="docutils literal notranslate"><span class="pre">80d2689</span></code></a>)</p></li>
+<li><p>Make it possible to specify a node key (<a class="reference external" href="https://github.com/mcbeet/beet/commit/2b0595e3ee34847eceb9e6bfef725ee15eaf78d5"><code class="docutils literal notranslate"><span class="pre">2b0595e</span></code></a>)</p></li>
+<li><p>Add generate_tree (<a class="reference external" href="https://github.com/mcbeet/beet/commit/d37df14d6c6b45579fb64b2f7b254ac1bdd1d076"><code class="docutils literal notranslate"><span class="pre">d37df14</span></code></a>)</p></li>
+<li><p>Output the commands in-place when the path matches the current function (<a class="reference external" href="https://github.com/mcbeet/beet/commit/dff5d51a87b031557b374c669c54ca827ecf734f"><code class="docutils literal notranslate"><span class="pre">dff5d51</span></code></a>)</p></li>
+<li><p>Add beet.contrib.template_context (<a class="reference external" href="https://github.com/mcbeet/beet/commit/12bc6ef83ce62f03b6238abae351259a94c32fc0"><code class="docutils literal notranslate"><span class="pre">12bc6ef</span></code></a>)</p></li>
+<li><p>Add beet.contrib.template_sandbox (<a class="reference external" href="https://github.com/mcbeet/beet/commit/55fbe92c8a04d04f4696323ce4605536be3afa73"><code class="docutils literal notranslate"><span class="pre">55fbe92</span></code></a>)</p></li>
+<li><p>Ctx is no longer exposed to templates (<a class="reference external" href="https://github.com/mcbeet/beet/commit/00ca7e97513aa2638fb5cf27e48186e661b93015"><code class="docutils literal notranslate"><span class="pre">00ca7e9</span></code></a>)</p></li>
+<li><p>Inject can now import services on the fly (<a class="reference external" href="https://github.com/mcbeet/beet/commit/edfe5af659f4deda69c99a08ea2526d72eccc13d"><code class="docutils literal notranslate"><span class="pre">edfe5af</span></code></a>)</p></li>
+<li><p>Add prepend and append to inline_function plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/e12347f1b4b96a64dc8ee5348a4d5a85b5964977"><code class="docutils literal notranslate"><span class="pre">e12347f</span></code></a>)</p></li>
+<li><p>Add generate(render=) and make hash lowercase (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a08c73c8cd8bb9efc8513092cdc4c78dc07206c2"><code class="docutils literal notranslate"><span class="pre">a08c73c</span></code></a>)</p></li>
+<li><p>Render_file template source_path fallback (<a class="reference external" href="https://github.com/mcbeet/beet/commit/666b697b5e3bb01a7093c5a589896124204833d7"><code class="docutils literal notranslate"><span class="pre">666b697</span></code></a>)</p></li>
+<li><p>Add generate.push() (<a class="reference external" href="https://github.com/mcbeet/beet/commit/40b7680465f4a0bd7888d5a9b0dba61fee8f3712"><code class="docutils literal notranslate"><span class="pre">40b7680</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-20-1-2021-04-22">
+<h2>v0.20.1 (2021-04-22)<a class="headerlink" href="#v0-20-1-2021-04-22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Fix<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Join generate argument with current template (<a class="reference external" href="https://github.com/mcbeet/beet/commit/074ee288bfdf2e94af344363e511a59cd9c61572"><code class="docutils literal notranslate"><span class="pre">074ee28</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-20-0-2021-04-17">
+<h2>v0.20.0 (2021-04-17)<a class="headerlink" href="#v0-20-0-2021-04-17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Feature<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add generate.objective() and beet.contrib.scoreboard (<a class="reference external" href="https://github.com/mcbeet/beet/commit/6a5376a237a6669283aa79885a0c21998e389b71"><code class="docutils literal notranslate"><span class="pre">6a5376a</span></code></a>)</p></li>
+<li><p>Add id and hash generate helpers (<a class="reference external" href="https://github.com/mcbeet/beet/commit/00cd667f94701ecffe4e31f1c8eaf1cbd923e54b"><code class="docutils literal notranslate"><span class="pre">00cd667</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>Fix<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Default generate.id() to {incr} (<a class="reference external" href="https://github.com/mcbeet/beet/commit/4429ff6a69a3f56e94b2650897313e1aac7c6901"><code class="docutils literal notranslate"><span class="pre">4429ff6</span></code></a>)</p></li>
+<li><p>Propagate generator type and forgot return annotation for hash() (<a class="reference external" href="https://github.com/mcbeet/beet/commit/b1b1766dc78bd651a8065a1d11252a2bcceb1e46"><code class="docutils literal notranslate"><span class="pre">b1b1766</span></code></a>)</p></li>
+<li><p>Don’t increment registry keys unless {incr} is present (<a class="reference external" href="https://github.com/mcbeet/beet/commit/9786c369fa4bf3ff28d2ef5fb4dbb7263ae01f87"><code class="docutils literal notranslate"><span class="pre">9786c36</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-19-1-2021-04-02">
+<h2>v0.19.1 (2021-04-02)<a class="headerlink" href="#v0-19-1-2021-04-02" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>Fix<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>generator:</strong> Only default to content hash if hash wasn’t explicitly provided (<a class="reference external" href="https://github.com/mcbeet/beet/commit/bee1df4d1ea1ed12de8150c87043915f70ef5372"><code class="docutils literal notranslate"><span class="pre">bee1df4</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-19-0-2021-03-29">
+<h2>v0.19.0 (2021-03-29)<a class="headerlink" href="#v0-19-0-2021-03-29" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>Feature<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Make generator prefix and namespace configurable and add tests (<a class="reference external" href="https://github.com/mcbeet/beet/commit/4972534239f1a994c3382f16973f08cecebadf0b"><code class="docutils literal notranslate"><span class="pre">4972534</span></code></a>)</p></li>
+<li><p>Refactor hangman plugin to support run commands syntax (<a class="reference external" href="https://github.com/mcbeet/beet/commit/849697b4f62be42dade6e5ac6c728a156a6c583b"><code class="docutils literal notranslate"><span class="pre">849697b</span></code></a>)</p></li>
+<li><p>Add context generator (<a class="reference external" href="https://github.com/mcbeet/beet/commit/09eb6ab4bbaf8de0dc9ed968fc6d277a7eb0c07b"><code class="docutils literal notranslate"><span class="pre">09eb6ab</span></code></a>)</p></li>
+<li><p>Add file default value (<a class="reference external" href="https://github.com/mcbeet/beet/commit/205c9ff16b060ea91ab1b5eda0c1de9583ca5e6b"><code class="docutils literal notranslate"><span class="pre">205c9ff</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-18-0-2021-03-27">
+<h2>v0.18.0 (2021-03-27)<a class="headerlink" href="#v0-18-0-2021-03-27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>Feature<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add ignore_name test utility (<a class="reference external" href="https://github.com/mcbeet/beet/commit/e5ee8f22791a8fa500a5f6093ec95ea00ef4fe51"><code class="docutils literal notranslate"><span class="pre">e5ee8f2</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-17-3-2021-03-27">
+<h2>v0.17.3 (2021-03-27)<a class="headerlink" href="#v0-17-3-2021-03-27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Fix<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Prevent explanation from crashing when assertrepr_compare returns None (<a class="reference external" href="https://github.com/mcbeet/beet/commit/0ed03ed8c5180455934d0bc90e294391b059e04f"><code class="docutils literal notranslate"><span class="pre">0ed03ed</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>Documentation<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add changelog page (<a class="reference external" href="https://github.com/mcbeet/beet/commit/3c554ac03be1ef71b94c52ea28ee7e404031b86a"><code class="docutils literal notranslate"><span class="pre">3c554ac</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-17-2-2021-03-24">
+<h2>v0.17.2 (2021-03-24)<a class="headerlink" href="#v0-17-2-2021-03-24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Fix<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>hangman:</strong> Handle trailing comments (<a class="reference external" href="https://github.com/mcbeet/beet/commit/ff7ba225a099f6e5c3b5b22fb3bcfab7114acfe6"><code class="docutils literal notranslate"><span class="pre">ff7ba22</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-17-1-2021-03-24">
+<h2>v0.17.1 (2021-03-24)<a class="headerlink" href="#v0-17-1-2021-03-24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>Fix<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Remove dedent extension (<a class="reference external" href="https://github.com/mcbeet/beet/commit/ab0797af365e9c77d6c0bf62234c232c137785bf"><code class="docutils literal notranslate"><span class="pre">ab0797a</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-17-0-2021-03-24">
+<h2>v0.17.0 (2021-03-24)<a class="headerlink" href="#v0-17-0-2021-03-24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>Feature<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add hangman plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/2a96811892ad0bd4d4f858b973f10bff794eabdf"><code class="docutils literal notranslate"><span class="pre">2a96811</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>Documentation<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Update homepage (<a class="reference external" href="https://github.com/mcbeet/beet/commit/3a25a4cba0ca15b05b09d1e1ec8f134aefc9e0f3"><code class="docutils literal notranslate"><span class="pre">3a25a4c</span></code></a>)</p></li>
+<li><p>Update (<a class="reference external" href="https://github.com/mcbeet/beet/commit/825181bfe51abfb59d5658e38d4be67c9833d33f"><code class="docutils literal notranslate"><span class="pre">825181b</span></code></a>)</p></li>
+<li><p>Update cli help text (<a class="reference external" href="https://github.com/mcbeet/beet/commit/6093b61180031560aab4f04ba65cc75860aa9b2b"><code class="docutils literal notranslate"><span class="pre">6093b61</span></code></a>)</p></li>
+<li><p>Add action (<a class="reference external" href="https://github.com/mcbeet/beet/commit/579ea4f177f045ea3fc2d096c7d04f91de60a4ba"><code class="docutils literal notranslate"><span class="pre">579ea4f</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-16-0-2021-03-21">
+<h2>v0.16.0 (2021-03-21)<a class="headerlink" href="#v0-16-0-2021-03-21" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>Feature<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support core shaders (<a class="reference external" href="https://github.com/mcbeet/beet/commit/69e3d1928891891b26408ca50f6faa558df629c1"><code class="docutils literal notranslate"><span class="pre">69e3d19</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h3>Fix<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Better file comparisons with source_path fast path (<a class="reference external" href="https://github.com/mcbeet/beet/commit/3c12aa7bee647d411393711e869d99f40713effe"><code class="docutils literal notranslate"><span class="pre">3c12aa7</span></code></a>)</p></li>
+<li><p>Properly display edited filename on windows (<a class="reference external" href="https://github.com/mcbeet/beet/commit/e3c189035d155a234aff9a9beed4caf950040e3e"><code class="docutils literal notranslate"><span class="pre">e3c1890</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="breaking">
+<h3>Breaking<a class="headerlink" href="#breaking" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>ShaderProgram was renamed to Shader  (<a class="reference external" href="https://github.com/mcbeet/beet/commit/69e3d1928891891b26408ca50f6faa558df629c1"><code class="docutils literal notranslate"><span class="pre">69e3d19</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-15-0-2021-03-19">
+<h2>v0.15.0 (2021-03-19)<a class="headerlink" href="#v0-15-0-2021-03-19" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h3>Feature<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add logging (<a class="reference external" href="https://github.com/mcbeet/beet/commit/6505cbb47feed1d0c4934468b67e2bd9be4aafe9"><code class="docutils literal notranslate"><span class="pre">6505cbb</span></code></a>)</p></li>
+<li><p>Add babelbox plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/70e1829de45e61400c9dfcd3698ef10b41091be7"><code class="docutils literal notranslate"><span class="pre">70e1829</span></code></a>)</p></li>
+<li><p>Add workers (<a class="reference external" href="https://github.com/mcbeet/beet/commit/eacd2ae4a6bad9fdc018f3849b748c12e9b91946"><code class="docutils literal notranslate"><span class="pre">eacd2ae</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h3>Fix<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Compare data for equality for json files (<a class="reference external" href="https://github.com/mcbeet/beet/commit/298e2e1989d90d11dc7706c5d24e8741a86901af"><code class="docutils literal notranslate"><span class="pre">298e2e1</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-14-0-2021-03-18">
+<h2>v0.14.0 (2021-03-18)<a class="headerlink" href="#v0-14-0-2021-03-18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id21">
+<h3>Feature<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support language files and custom languages (<a class="reference external" href="https://github.com/mcbeet/beet/commit/abec2b1b4f2fc27ff6b0ddf84fb9ace81834c104"><code class="docutils literal notranslate"><span class="pre">abec2b1</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h3>Fix<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Only modify sys.path if the directory is not already present (<a class="reference external" href="https://github.com/mcbeet/beet/commit/8575d31b14c71063479af584715cfe9e7c92086f"><code class="docutils literal notranslate"><span class="pre">8575d31</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>Breaking<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>rename pin descriptors  (<a class="reference external" href="https://github.com/mcbeet/beet/commit/abec2b1b4f2fc27ff6b0ddf84fb9ace81834c104"><code class="docutils literal notranslate"><span class="pre">abec2b1</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-13-0-2021-03-14">
+<h2>v0.13.0 (2021-03-14)<a class="headerlink" href="#v0-13-0-2021-03-14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id24">
+<h3>Feature<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add plugin autoload (<a class="reference external" href="https://github.com/mcbeet/beet/commit/9cac58e2ea5348509fde32ccfbd3e71a5c503678"><code class="docutils literal notranslate"><span class="pre">9cac58e</span></code></a>)</p></li>
+<li><p>Make cli extensible (<a class="reference external" href="https://github.com/mcbeet/beet/commit/9adb10c5664362fb782a417eaf7b8aaf784e7e5c"><code class="docutils literal notranslate"><span class="pre">9adb10c</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h3>Fix<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Don’t crash when there are no entry points (<a class="reference external" href="https://github.com/mcbeet/beet/commit/85f6bd7408c98cc02b03a2a28165da2c576b42fb"><code class="docutils literal notranslate"><span class="pre">85f6bd7</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-12-0-2021-03-09">
+<h2>v0.12.0 (2021-03-09)<a class="headerlink" href="#v0-12-0-2021-03-09" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id26">
+<h3>Feature<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add sandstone plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/cad910153131315097a6cf65f35a396ddfa525f9"><code class="docutils literal notranslate"><span class="pre">cad9101</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-11-2-2021-03-09">
+<h2>v0.11.2 (2021-03-09)<a class="headerlink" href="#v0-11-2-2021-03-09" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id27">
+<h3>Fix<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Accept ProjectConfig instances for run_beet (<a class="reference external" href="https://github.com/mcbeet/beet/commit/9939b107c3e6dadc5e3fc8cdaba34bd06b019a53"><code class="docutils literal notranslate"><span class="pre">9939b10</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-11-1-2021-03-03">
+<h2>v0.11.1 (2021-03-03)<a class="headerlink" href="#v0-11-1-2021-03-03" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h3>Fix<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Ignore click exceptions in error_handler (<a class="reference external" href="https://github.com/mcbeet/beet/commit/95447651b9c40a46484d8edafc4145b587369509"><code class="docutils literal notranslate"><span class="pre">9544765</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-11-0-2021-03-03">
+<h2>v0.11.0 (2021-03-03)<a class="headerlink" href="#v0-11-0-2021-03-03" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id29">
+<h3>Feature<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add pytest plugin for rich explanations (<a class="reference external" href="https://github.com/mcbeet/beet/commit/947a6b5fe251fe630afa326e62e365d5ebaca990"><code class="docutils literal notranslate"><span class="pre">947a6b5</span></code></a>)</p></li>
+<li><p>Add whitelist (<a class="reference external" href="https://github.com/mcbeet/beet/commit/f5730ba152921b64afbe4c629553c182815a7877"><code class="docutils literal notranslate"><span class="pre">f5730ba</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-10-5-2021-02-27">
+<h2>v0.10.5 (2021-02-27)<a class="headerlink" href="#v0-10-5-2021-02-27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id30">
+<h3>Fix<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Overload getitem to return namespaceproxy (<a class="reference external" href="https://github.com/mcbeet/beet/commit/6b0b731c77253d7cf335cda09b778feee61045d8"><code class="docutils literal notranslate"><span class="pre">6b0b731</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-10-4-2021-02-25">
+<h2>v0.10.4 (2021-02-25)<a class="headerlink" href="#v0-10-4-2021-02-25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h3>Fix<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Change path and save (<a class="reference external" href="https://github.com/mcbeet/beet/commit/ecc659385bb64fa884a01648e2f0db553542160a"><code class="docutils literal notranslate"><span class="pre">ecc6593</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-10-3-2021-02-25">
+<h2>v0.10.3 (2021-02-25)<a class="headerlink" href="#v0-10-3-2021-02-25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id32">
+<h3>Fix<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Turn run_beet() into a context manager (<a class="reference external" href="https://github.com/mcbeet/beet/commit/852cebbb71a09be66d318cd5ce6d2f8c9d6ffb7a"><code class="docutils literal notranslate"><span class="pre">852cebb</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-10-2-2021-02-25">
+<h2>v0.10.2 (2021-02-25)<a class="headerlink" href="#v0-10-2-2021-02-25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id33">
+<h3>Fix<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add download method (<a class="reference external" href="https://github.com/mcbeet/beet/commit/7951470a5f7be4973816b686b311e52fd29f9a32"><code class="docutils literal notranslate"><span class="pre">7951470</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-10-1-2021-02-25">
+<h2>v0.10.1 (2021-02-25)<a class="headerlink" href="#v0-10-1-2021-02-25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id34">
+<h3>Fix<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use plain list to hold commands (<a class="reference external" href="https://github.com/mcbeet/beet/commit/9b02b7711e3e63596f6250984a320059b6e47156"><code class="docutils literal notranslate"><span class="pre">9b02b77</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-10-0-2021-02-24">
+<h2>v0.10.0 (2021-02-24)<a class="headerlink" href="#v0-10-0-2021-02-24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id35">
+<h3>Feature<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add cache.get_path() (<a class="reference external" href="https://github.com/mcbeet/beet/commit/f72b51c8aa617ff1e923fc8cad6b3f75c0566299"><code class="docutils literal notranslate"><span class="pre">f72b51c</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id36">
+<h3>Documentation<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add custom domain (<a class="reference external" href="https://github.com/mcbeet/beet/commit/899d09f0e33ab45589ffb65849abf8c8d8ae1569"><code class="docutils literal notranslate"><span class="pre">899d09f</span></code></a>)</p></li>
+<li><p>Fix malformed table (<a class="reference external" href="https://github.com/mcbeet/beet/commit/3dd0a15ffcf9deb289e0a630d838dc0c21944251"><code class="docutils literal notranslate"><span class="pre">3dd0a15</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-9-4-2021-02-23">
+<h2>v0.9.4 (2021-02-23)<a class="headerlink" href="#v0-9-4-2021-02-23" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id37">
+<h3>Fix<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add 1.17 item modifiers (<a class="reference external" href="https://github.com/mcbeet/beet/commit/9463ac857d36044563f712f890662720b4123608"><code class="docutils literal notranslate"><span class="pre">9463ac8</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id38">
+<h3>Documentation<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add toolchain (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a6abf0522a76e3121b6125879ae85e1c355f7e6c"><code class="docutils literal notranslate"><span class="pre">a6abf05</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-9-3-2021-02-22">
+<h2>v0.9.3 (2021-02-22)<a class="headerlink" href="#v0-9-3-2021-02-22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id39">
+<h3>Fix<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Take into account pack.mcmeta in pack bool() (<a class="reference external" href="https://github.com/mcbeet/beet/commit/62af3881a898eb4a260abeffb460df4e1d2d055e"><code class="docutils literal notranslate"><span class="pre">62af388</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-9-2-2021-02-21">
+<h2>v0.9.2 (2021-02-21)<a class="headerlink" href="#v0-9-2-2021-02-21" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id40">
+<h3>Fix<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Annotate descriptors (<a class="reference external" href="https://github.com/mcbeet/beet/commit/4e47cc6dc612eb0f804dc8f24454f5f590a24544"><code class="docutils literal notranslate"><span class="pre">4e47cc6</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-9-1-2021-02-20">
+<h2>v0.9.1 (2021-02-20)<a class="headerlink" href="#v0-9-1-2021-02-20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id41">
+<h3>Fix<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Make it possible to specify an existing cache and use run_beet in examples (<a class="reference external" href="https://github.com/mcbeet/beet/commit/5cdea1d46d36a4324582232a6773edefcadb4350"><code class="docutils literal notranslate"><span class="pre">5cdea1d</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-9-0-2021-02-20">
+<h2>v0.9.0 (2021-02-20)<a class="headerlink" href="#v0-9-0-2021-02-20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id42">
+<h3>Feature<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add run_beet helper function (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a2cb5454972f768b215248fbc95575fd26a34dfc"><code class="docutils literal notranslate"><span class="pre">a2cb545</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-8-2-2021-02-20">
+<h2>v0.8.2 (2021-02-20)<a class="headerlink" href="#v0-8-2-2021-02-20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id43">
+<h3>Fix<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Overload merge to automatically merge pack extras too (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a586ee30eb00aadb0276a6bb7b2c4b2a637ed236"><code class="docutils literal notranslate"><span class="pre">a586ee3</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-8-1-2021-02-18">
+<h2>v0.8.1 (2021-02-18)<a class="headerlink" href="#v0-8-1-2021-02-18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id44">
+<h3>Fix<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add FormattedPipelineException and use config_error_handler in subproject (<a class="reference external" href="https://github.com/mcbeet/beet/commit/49895e34246f39529dd984cec434863977be5da8"><code class="docutils literal notranslate"><span class="pre">49895e3</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-8-0-2021-02-18">
+<h2>v0.8.0 (2021-02-18)<a class="headerlink" href="#v0-8-0-2021-02-18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id45">
+<h3>Feature<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Remove <strong>render</strong> and expose render path and render group in meta (<a class="reference external" href="https://github.com/mcbeet/beet/commit/adc945207098bdf4eed7699cd01a855ad899e846"><code class="docutils literal notranslate"><span class="pre">adc9452</span></code></a>)</p></li>
+<li><p>Add ctx.override to temporarily change meta (<a class="reference external" href="https://github.com/mcbeet/beet/commit/c1483d08244ed159f055d18ab487191b40a49cde"><code class="docutils literal notranslate"><span class="pre">c1483d0</span></code></a>)</p></li>
+<li><p>Expose renderer as a standalone plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/e935383abf7f8de9db0a7ce354b50fa78eca45fb"><code class="docutils literal notranslate"><span class="pre">e935383</span></code></a>)</p></li>
+<li><p>Add sandbox (<a class="reference external" href="https://github.com/mcbeet/beet/commit/bd538af938b740c07a1f1bdf6834816f4c476e51"><code class="docutils literal notranslate"><span class="pre">bd538af</span></code></a>)</p></li>
+<li><p>Add explicit activate context manager (<a class="reference external" href="https://github.com/mcbeet/beet/commit/1e21f66fa8068cc7309951f9924dce85ab27b333"><code class="docutils literal notranslate"><span class="pre">1e21f66</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id46">
+<h3>Fix<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Replace exception_fallthrough with PipelineFallthroughException (<a class="reference external" href="https://github.com/mcbeet/beet/commit/35ace13821338f699a3426858c3b2257fbf2e73e"><code class="docutils literal notranslate"><span class="pre">35ace13</span></code></a>)</p></li>
+<li><p>Set ctx template global in <strong>post_init</strong> (<a class="reference external" href="https://github.com/mcbeet/beet/commit/96d928b6a81f1f272930b2ed30eac082ff455e66"><code class="docutils literal notranslate"><span class="pre">96d928b</span></code></a>)</p></li>
+<li><p>Expose the template directories (<a class="reference external" href="https://github.com/mcbeet/beet/commit/7d6f7a1b009770984515b09550bc36e0c7b39d96"><code class="docutils literal notranslate"><span class="pre">7d6f7a1</span></code></a>)</p></li>
+<li><p>Ignore cache relative to the resolved directory (<a class="reference external" href="https://github.com/mcbeet/beet/commit/3e77d7929b5c2c3b71c994f52b19e2dccafbdbff"><code class="docutils literal notranslate"><span class="pre">3e77d79</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h3>Documentation<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Document ctx.activate() and ctx.override() (<a class="reference external" href="https://github.com/mcbeet/beet/commit/286eca20b7d5b0ab64ff74048f0f8c1ecaef5e2e"><code class="docutils literal notranslate"><span class="pre">286eca2</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-7-0-2021-02-16">
+<h2>v0.7.0 (2021-02-16)<a class="headerlink" href="#v0-7-0-2021-02-16" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id48">
+<h3>Feature<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add lantern_load plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/7118f10f49e574b8701004fdcc5f30dc56e89167"><code class="docutils literal notranslate"><span class="pre">7118f10</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-6-1-2021-02-13">
+<h2>v0.6.1 (2021-02-13)<a class="headerlink" href="#v0-6-1-2021-02-13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id49">
+<h3>Fix<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Make it possible to use text components and override the description in plugins (<a class="reference external" href="https://github.com/mcbeet/beet/commit/ad972d011f10e7006d34c07a37f8116f7bc2227f"><code class="docutils literal notranslate"><span class="pre">ad972d0</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-6-0-2021-02-13">
+<h2>v0.6.0 (2021-02-13)<a class="headerlink" href="#v0-6-0-2021-02-13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id50">
+<h3>Feature<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add subproject helper (<a class="reference external" href="https://github.com/mcbeet/beet/commit/d60417924b44284dac45d5ad4b23d4b5a08aee99"><code class="docutils literal notranslate"><span class="pre">d604179</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id51">
+<h3>Documentation<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add link to pipeline configuration video (<a class="reference external" href="https://github.com/mcbeet/beet/commit/811d426ebe5943b683e957a2e98e97a8522b3122"><code class="docutils literal notranslate"><span class="pre">811d426</span></code></a>)</p></li>
+<li><p>Add docstring to context inject method (<a class="reference external" href="https://github.com/mcbeet/beet/commit/2f09ffe591612246c23d8997467630aa79002c75"><code class="docutils literal notranslate"><span class="pre">2f09ffe</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-5-1-2021-01-27">
+<h2>v0.5.1 (2021-01-27)<a class="headerlink" href="#v0-5-1-2021-01-27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id52">
+<h3>Fix<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Expose project metadata in context (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a04081ce23c941bd240ff1187fc40645fce7e627"><code class="docutils literal notranslate"><span class="pre">a04081c</span></code></a>)</p></li>
+<li><p>Better dotted pack name handling (<a class="reference external" href="https://github.com/mcbeet/beet/commit/79fccfff9d92353cebbdc631b6ae56b2e6a99be3"><code class="docutils literal notranslate"><span class="pre">79fccff</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-5-0-2021-01-23">
+<h2>v0.5.0 (2021-01-23)<a class="headerlink" href="#v0-5-0-2021-01-23" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id53">
+<h3>Feature<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add beet.contrib.minify_functions plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a7774a9b799eac7eceb078759e02b8714da9d9c1"><code class="docutils literal notranslate"><span class="pre">a7774a9</span></code></a>)</p></li>
+<li><p>Add beet.contrib.minify_json plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/78cd9728401570ad772a3684577667c126eef0a9"><code class="docutils literal notranslate"><span class="pre">78cd972</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id54">
+<h3>Fix<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Typo in serialization descriptor (<a class="reference external" href="https://github.com/mcbeet/beet/commit/edbe1740bd9bb0b85877746f693f3ba7247bbf57"><code class="docutils literal notranslate"><span class="pre">edbe174</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id55">
+<h3>Documentation<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add link to plugins basics video (<a class="reference external" href="https://github.com/mcbeet/beet/commit/3d7a3dbceefeb4afc998a2599f02c441016c8c31"><code class="docutils literal notranslate"><span class="pre">3d7a3db</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-4-0-2021-01-14">
+<h2>v0.4.0 (2021-01-14)<a class="headerlink" href="#v0-4-0-2021-01-14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id56">
+<h3>Feature<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Handle resource pack fonts and tweak docstrings (<a class="reference external" href="https://github.com/mcbeet/beet/commit/57cce7380a2f9b9a15a61bac4d824e2d6ce48a2f"><code class="docutils literal notranslate"><span class="pre">57cce73</span></code></a>)</p></li>
+<li><p>Add shaders (<a class="reference external" href="https://github.com/mcbeet/beet/commit/34505d99e9b6714c593a4a5f5b919d22dacd6fa2"><code class="docutils literal notranslate"><span class="pre">34505d9</span></code></a>)</p></li>
+<li><p>Locate_minecraft() now takes into account the MINECRAFT_PATH environment variable (<a class="reference external" href="https://github.com/mcbeet/beet/commit/ad6668b639a8ed6eba18cff1a41b11666b2db488"><code class="docutils literal notranslate"><span class="pre">ad6668b</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id57">
+<h3>Fix<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Also look for the .minecraft folder in the launcher files on linux (<a class="reference external" href="https://github.com/mcbeet/beet/commit/564578935b25193a2cbbcf8e71f44d942336a5b7"><code class="docutils literal notranslate"><span class="pre">5645789</span></code></a>)</p></li>
+<li><p>Strip extra underscores from normalized name (<a class="reference external" href="https://github.com/mcbeet/beet/commit/55b8494248098aa532fa816b0abdf6d46b236021"><code class="docutils literal notranslate"><span class="pre">55b8494</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-3-3-2021-01-10">
+<h2>v0.3.3 (2021-01-10)<a class="headerlink" href="#v0-3-3-2021-01-10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id58">
+<h3>Fix<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Tweak typing for merge implementation (<a class="reference external" href="https://github.com/mcbeet/beet/commit/8efa444ccf67dd25eb1fd23d4e89f07407bf404c"><code class="docutils literal notranslate"><span class="pre">8efa444</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id59">
+<h3>Documentation<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add link to library overview video (<a class="reference external" href="https://github.com/mcbeet/beet/commit/4f37a7496d863b0535b39a1b6c1ad3df786bc89b"><code class="docutils literal notranslate"><span class="pre">4f37a74</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-3-2-2020-12-29">
+<h2>v0.3.2 (2020-12-29)<a class="headerlink" href="#v0-3-2-2020-12-29" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id60">
+<h3>Fix<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use forward slash for zipfile paths on windows (<a class="reference external" href="https://github.com/mcbeet/beet/commit/b605c07a06106fd97866b9c442b39313381aabb5"><code class="docutils literal notranslate"><span class="pre">b605c07</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id61">
+<h3>Documentation<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Link to command-line video (<a class="reference external" href="https://github.com/mcbeet/beet/commit/1f45b036c55902d1736f1f63cc26202291f29842"><code class="docutils literal notranslate"><span class="pre">1f45b03</span></code></a>)</p></li>
+<li><p>Add quick start to readme (<a class="reference external" href="https://github.com/mcbeet/beet/commit/3310d16d5490c9554c40acb0c4d295b4d8e10e68"><code class="docutils literal notranslate"><span class="pre">3310d16</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-3-1-2020-12-22">
+<h2>v0.3.1 (2020-12-22)<a class="headerlink" href="#v0-3-1-2020-12-22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id62">
+<h3>Fix<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Default match shouldn’t match anything (<a class="reference external" href="https://github.com/mcbeet/beet/commit/6f01d6a19d63d9374e575942cf40dc1b14a4df88"><code class="docutils literal notranslate"><span class="pre">6f01d6a</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-3-0-2020-12-22">
+<h2>v0.3.0 (2020-12-22)<a class="headerlink" href="#v0-3-0-2020-12-22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id63">
+<h3>Feature<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add function_header plugin (<a class="reference external" href="https://github.com/mcbeet/beet/commit/bb73eeef0d984ca80cfd378ab2b0a99d89a33d47"><code class="docutils literal notranslate"><span class="pre">bb73eee</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id64">
+<h3>Fix<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Rename inline plugins (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a6b7aaa60d97bf203d771861effc0ee61425786d"><code class="docutils literal notranslate"><span class="pre">a6b7aaa</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id65">
+<h3>Documentation<a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add module docstring to inline plugins (<a class="reference external" href="https://github.com/mcbeet/beet/commit/d829d89c815c15b34dd51ac6e3a68d563906b3c4"><code class="docutils literal notranslate"><span class="pre">d829d89</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-2-2-2020-12-21">
+<h2>v0.2.2 (2020-12-21)<a class="headerlink" href="#v0-2-2-2020-12-21" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id66">
+<h3>Fix<a class="headerlink" href="#id66" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Trigger release to update readme (<a class="reference external" href="https://github.com/mcbeet/beet/commit/d409af56d4c82da5d3c2743a158128cb4ed0b062"><code class="docutils literal notranslate"><span class="pre">d409af5</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id67">
+<h3>Documentation<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Start writing docs (<a class="reference external" href="https://github.com/mcbeet/beet/commit/034c662878c88d2da84c71f15d46e85c38e2e5db"><code class="docutils literal notranslate"><span class="pre">034c662</span></code></a>)</p></li>
+<li><p>Update readme (<a class="reference external" href="https://github.com/mcbeet/beet/commit/58c98226b091f3dd5994888bfdd71301dafb278f"><code class="docutils literal notranslate"><span class="pre">58c9822</span></code></a>)</p></li>
+<li><p>Add mudkip (<a class="reference external" href="https://github.com/mcbeet/beet/commit/fb3cfddee1b220e055659393e9ce747fddcd5a26"><code class="docutils literal notranslate"><span class="pre">fb3cfdd</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-2-1-2020-12-21">
+<h2>v0.2.1 (2020-12-21)<a class="headerlink" href="#v0-2-1-2020-12-21" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id68">
+<h3>Fix<a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Include better dependencies for windows (<a class="reference external" href="https://github.com/mcbeet/beet/commit/b28977f206bd48b0cdae67ac1dad2e17ade81f24"><code class="docutils literal notranslate"><span class="pre">b28977f</span></code></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id69">
+<h3>Documentation<a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fix main branch (<a class="reference external" href="https://github.com/mcbeet/beet/commit/74ac998c7103ebdb9c95058e141ab1acc703670b"><code class="docutils literal notranslate"><span class="pre">74ac998</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="v0-2-0-2020-12-21">
+<h2>v0.2.0 (2020-12-21)<a class="headerlink" href="#v0-2-0-2020-12-21" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id70">
+<h3>Feature<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Trigger first automatic release (<a class="reference external" href="https://github.com/mcbeet/beet/commit/a5664b3fa7f7fc6c9d1d93f1cc26f91504dd3dae"><code class="docutils literal notranslate"><span class="pre">a5664b3</span></code></a>)</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="../toolchain/">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Toolchain documentation</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/changelog.md.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

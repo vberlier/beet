@@ -1,0 +1,1006 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Toolchain documentation" href="../toolchain/" /><link rel="prev" title="Beet documentation" href="../" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><meta name="generator" content="sphinx-3.5.3, furo 2021.04.11.beta34"/>
+        <title>General overview - Beet documentation</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mudkip_furo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mudkip_furo.css" />
+    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Beet documentation</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search/">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">General overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchain/">Toolchain documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Project links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mcbeet/beet">GitHub Repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pypi.org/project/beet">PyPI Package</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="general-overview">
+<h1>General overview<a class="headerlink" href="#general-overview" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">beet</span></code> project tries to provide consistent abstractions that work well together. A lot of care goes into leveraging existing patterns and intuitions to make the API as familiar as possible.</p>
+<p>To keep the API surface manageable, abstractions are designed to provide orthogonal functionality. When things happen to fit into each other it’s generally not an accident.</p>
+<div class="section" id="data-packs-and-resource-packs">
+<h2>Data packs and resource packs<a class="headerlink" href="#data-packs-and-resource-packs" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">beet</span></code> library allows you to work with data packs and resource packs at a high level. Data pack and resource pack objects are fast and flexible primitives that make it easy inspect, generate, merge and transform files, and perform bulk operations.</p>
+<p>Data packs and resource packs are identical in nature and only differ in the types of resources they can contain. As a result, <code class="docutils literal notranslate"><span class="pre">beet</span></code> derives the concrete <code class="docutils literal notranslate"><span class="pre">DataPack</span></code> and <code class="docutils literal notranslate"><span class="pre">ResourcePack</span></code> classes from a generic <code class="docutils literal notranslate"><span class="pre">Pack</span></code> definition. It’s the shared base class that’s responsible for implementing all the operations that we’ll be discussing in the next sections.</p>
+<div class="section" id="object-hierarchy">
+<h3>Object hierarchy<a class="headerlink" href="#object-hierarchy" title="Permalink to this headline">¶</a></h3>
+<p>Data packs are dict-like objects holding a collection of namespaces. Each key maps the name of the namespace to a <code class="docutils literal notranslate"><span class="pre">Namespace</span></code> instance that contains all the files within the namespace. Namespaces are created automatically and you shouldn’t need to create them manually.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">DataPack</span>
+
+<span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+<span class="n">demo_namespace</span> <span class="o">=</span> <span class="n">pack</span><span class="p">[</span><span class="s2">"demo"</span><span class="p">]</span>
+<span class="n">demo_namespace</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DataPackNamespace()
+</pre></div>
+</div>
+</div>
+</div>
+<p>Namespaces themselves are also dict-like objects. Files inside namespaces are organized into homogeneous containers. Each key maps a file type to the associated file container that contains all the files of the given type within the namespace.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">Function</span>
+
+<span class="n">demo_functions</span> <span class="o">=</span> <span class="n">demo_namespace</span><span class="p">[</span><span class="n">Function</span><span class="p">]</span>
+<span class="n">demo_functions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NamespaceContainer(keys=[])
+</pre></div>
+</div>
+</div>
+</div>
+<p>These namespace containers are dict-like objects as well. Each key corresponds to a file path from the root directory of the container and maps to the associated file instance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demo_functions</span><span class="p">[</span><span class="s2">"foo"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say hello"</span><span class="p">])</span>
+<span class="n">demo_functions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NamespaceContainer(keys=['foo'])
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you’re already familiar with data packs, the overall structure of the object hierarchy shouldn’t be surprising as it directly maps to the filesystem representation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span> <span class="o">==</span> <span class="p">{</span>
+    <span class="s2">"demo"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">Function</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"foo"</span><span class="p">:</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say hello"</span><span class="p">])</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Namespace containers are also available through attribute access. This is usually the syntax you’ll be looking for as it’s a bit more readable and provides better autocompletion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demo_namespace</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">"foo"</span><span class="p">]</span> <span class="ow">is</span> <span class="n">demo_namespace</span><span class="p">[</span><span class="n">Function</span><span class="p">][</span><span class="s2">"foo"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can even omit the container entirely when adding files to the namespace. The namespace will dispatch the file to the appropriate container automatically depending on its type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demo_namespace</span><span class="p">[</span><span class="s2">"bar"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say world"</span><span class="p">])</span>
+<span class="n">demo_namespace</span><span class="o">.</span><span class="n">functions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NamespaceContainer(keys=['foo', 'bar'])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="namespaced-file-identifiers">
+<h3>Namespaced file identifiers<a class="headerlink" href="#namespaced-file-identifiers" title="Permalink to this headline">¶</a></h3>
+<p>The object hierarchy is a 1-to-1 representation that lets you work with data packs as pure Python objects. However, it can be a bit tedious to navigate depending on what you’re trying to do. Most of the time, it’s easier to reason about files in the data pack with their namespaced identifiers, to reflect the way we interact with them in-game.</p>
+<p>Data pack objects let you access files in a single lookup with proxies that expose a namespaced view of all the files of a specific type over all the namespaces in the data pack.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+
+<span class="n">pack</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">()</span>
+<span class="n">pack</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span> <span class="ow">is</span> <span class="n">pack</span><span class="p">[</span><span class="s2">"demo"</span><span class="p">]</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">"foo"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Proxy attributes are always in sync with the underlying namespaces. You can also omit the attribute when adding files to data packs. The data pack object will dispatch the file to the appropriate proxy depending on its type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span><span class="p">[</span><span class="s2">"demo:bar"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">()</span>
+<span class="n">pack</span><span class="o">.</span><span class="n">functions</span> <span class="o">==</span> <span class="p">{</span>
+    <span class="s2">"demo:foo"</span><span class="p">:</span> <span class="n">Function</span><span class="p">(),</span>
+    <span class="s2">"demo:bar"</span><span class="p">:</span> <span class="n">Function</span><span class="p">(),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extra-files">
+<h3>Extra files<a class="headerlink" href="#extra-files" title="Permalink to this headline">¶</a></h3>
+<p>Unfortunately, data packs and resource packs aren’t limited to neatly namespaced files and can contain extra files at the pack level and at the namespace level. Still, the <code class="docutils literal notranslate"><span class="pre">beet</span></code> library handles extra files as first-class citizens. In fact, <code class="docutils literal notranslate"><span class="pre">pack.mcmeta</span></code> and <code class="docutils literal notranslate"><span class="pre">pack.png</span></code> are both handled through this mechanism.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">JsonFile</span>
+
+<span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+
+<span class="n">pack</span><span class="o">.</span><span class="n">extra</span> <span class="o">==</span> <span class="p">{</span>
+  <span class="s2">"pack.mcmeta"</span><span class="p">:</span> <span class="n">JsonFile</span><span class="p">({</span><span class="s2">"pack"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"description"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"pack_format"</span><span class="p">:</span> <span class="mi">6</span><span class="p">}})</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">extra</span></code> attribute maps filenames to their respective file handles. To make it easier to access, the <code class="docutils literal notranslate"><span class="pre">pack.mcmeta</span></code> file is also directly pinned to the data pack instance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span><span class="o">.</span><span class="n">mcmeta</span> <span class="ow">is</span> <span class="n">pack</span><span class="o">.</span><span class="n">extra</span><span class="p">[</span><span class="s2">"pack.mcmeta"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">pack.png</span></code> file works exactly the same. It’s pinned to the <code class="docutils literal notranslate"><span class="pre">icon</span></code> attribute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">PngFile</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="n">pack</span><span class="o">.</span><span class="n">icon</span> <span class="o">=</span> <span class="n">PngFile</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"RGB"</span><span class="p">,</span> <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span> <span class="s2">"red"</span><span class="p">))</span>
+<span class="n">pack</span><span class="o">.</span><span class="n">extra</span><span class="p">[</span><span class="s2">"pack.png"</span><span class="p">]</span><span class="o">.</span><span class="n">image</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/overview_21_0.png" src="../_images/overview_21_0.png"/>
+</div>
+</div>
+<p>For extra files at the namespace level we can look at the <code class="docutils literal notranslate"><span class="pre">sounds.json</span></code> file in resource packs. The file is pinned to the <code class="docutils literal notranslate"><span class="pre">sound_config</span></code> attribute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">ResourcePack</span><span class="p">,</span> <span class="n">SoundConfig</span>
+
+<span class="n">pack</span> <span class="o">=</span> <span class="n">ResourcePack</span><span class="p">()</span>
+
+<span class="n">pack</span><span class="p">[</span><span class="s2">"minecraft"</span><span class="p">]</span><span class="o">.</span><span class="n">sound_config</span> <span class="o">=</span> <span class="n">SoundConfig</span><span class="p">()</span>
+<span class="n">pack</span><span class="p">[</span><span class="s2">"minecraft"</span><span class="p">]</span><span class="o">.</span><span class="n">sound_config</span> <span class="ow">is</span> <span class="n">pack</span><span class="p">[</span><span class="s2">"minecraft"</span><span class="p">]</span><span class="o">.</span><span class="n">extra</span><span class="p">[</span><span class="s2">"sounds.json"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Extra files are loaded according to the schema returned by the <code class="docutils literal notranslate"><span class="pre">get_extra_info</span></code> function. The returned dictionary tells the code that loads the data pack or the resource pack what files it should be looking for in addition to namespaced files, and how to load them depending on the associated type. You can add arbitrary files to the <code class="docutils literal notranslate"><span class="pre">extra</span></code> container when saving.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DataPack</span><span class="o">.</span><span class="n">get_extra_info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'pack.mcmeta': beet.core.file.JsonFile, 'pack.png': beet.core.file.PngFile}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">ResourcePackNamespace</span>
+
+<span class="n">ResourcePackNamespace</span><span class="o">.</span><span class="n">get_extra_info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'sounds.json': beet.library.resource_pack.SoundConfig}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mcmeta-accessors">
+<h3>Mcmeta accessors<a class="headerlink" href="#mcmeta-accessors" title="Permalink to this headline">¶</a></h3>
+<p>Data pack metadata is stored in the <code class="docutils literal notranslate"><span class="pre">pack.mcmeta</span></code> file in the <code class="docutils literal notranslate"><span class="pre">extra</span></code> container. The file is pinned to the <code class="docutils literal notranslate"><span class="pre">mcmeta</span></code> attribute, but to make things even more convenient data pack objects let you access the description and the pack format directly through pinned attributes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+
+<span class="n">pack</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">"My awesome pack"</span>
+<span class="n">pack</span><span class="o">.</span><span class="n">pack_format</span> <span class="o">=</span> <span class="mi">42</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pack</span><span class="o">.</span><span class="n">mcmeta</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  "pack": {
+    "pack_format": 42,
+    "description": "My awesome pack"
+  }
+}
+</pre></div>
+</div>
+</div>
+</div>
+<p>With resource packs you can use the pinned <code class="docutils literal notranslate"><span class="pre">language_config</span></code> attribute to register custom languages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">Language</span>
+
+<span class="n">pack</span> <span class="o">=</span> <span class="n">ResourcePack</span><span class="p">()</span>
+
+<span class="n">pack</span><span class="p">[</span><span class="s2">"minecraft:custom"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Language</span><span class="p">({</span><span class="s2">"menu.singleplayer"</span><span class="p">:</span> <span class="s2">"Modified singleplayer button"</span><span class="p">})</span>
+<span class="n">pack</span><span class="o">.</span><span class="n">language_config</span><span class="p">[</span><span class="s2">"custom"</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Custom"</span><span class="p">,</span>
+    <span class="s2">"region"</span><span class="p">:</span> <span class="s2">"Custom"</span><span class="p">,</span>
+    <span class="s2">"bidirectional"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pack</span><span class="o">.</span><span class="n">mcmeta</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  "pack": {
+    "pack_format": 6,
+    "description": ""
+  },
+  "language": {
+    "custom": {
+      "name": "Custom",
+      "region": "Custom",
+      "bidirectional": false
+    }
+  }
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="namespace-binding-callbacks">
+<h3>Namespace binding callbacks<a class="headerlink" href="#namespace-binding-callbacks" title="Permalink to this headline">¶</a></h3>
+<p>Data packs and resource packs feature certain types of files that have a special kind of relationship and that are often created together. One example would be functions and function tags. Namespaced files have a binding callback that can run arbitrary code when they’re added to data packs. For example the <code class="docutils literal notranslate"><span class="pre">Function</span></code> constructor allows you to specify a list of function tags that will be associated with the function once it’s added to the data pack.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">FunctionTag</span>
+
+<span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+<span class="n">pack</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say hello"</span><span class="p">],</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">"minecraft:tick"</span><span class="p">])</span>
+
+<span class="n">pack</span><span class="o">.</span><span class="n">function_tags</span> <span class="o">==</span> <span class="p">{</span>
+    <span class="s2">"minecraft:tick"</span><span class="p">:</span> <span class="n">FunctionTag</span><span class="p">({</span><span class="s2">"values"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]}),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>The same thing works with textures and texture mcmeta in resource packs. Sound files can also automatically register themselves in <code class="docutils literal notranslate"><span class="pre">sounds.json</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">Texture</span><span class="p">,</span> <span class="n">TextureMcmeta</span>
+<span class="kn">from</span> <span class="nn">PIL.ImageDraw</span> <span class="kn">import</span> <span class="n">Draw</span>
+
+<span class="n">pack</span> <span class="o">=</span> <span class="n">ResourcePack</span><span class="p">()</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"RGB"</span><span class="p">,</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span> <span class="s2">"green"</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">rectangle</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">],</span> <span class="n">fill</span><span class="o">=</span><span class="s2">"yellow"</span><span class="p">)</span>
+
+<span class="n">pack</span><span class="p">[</span><span class="s2">"minecraft:block/dirt"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Texture</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">mcmeta</span><span class="o">=</span><span class="p">{</span><span class="s2">"animation"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"frametime"</span><span class="p">:</span> <span class="mi">20</span><span class="p">}})</span>
+
+<span class="n">pack</span><span class="o">.</span><span class="n">textures_mcmeta</span> <span class="o">==</span> <span class="p">{</span>
+    <span class="s2">"minecraft:block/dirt"</span><span class="p">:</span> <span class="n">TextureMcmeta</span><span class="p">({</span><span class="s2">"animation"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"frametime"</span><span class="p">:</span> <span class="mi">20</span><span class="p">}}),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also create files with a custom <code class="docutils literal notranslate"><span class="pre">on_bind</span></code> callback.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">on_bind</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">Function</span><span class="p">,</span> <span class="n">pack</span><span class="p">:</span> <span class="n">DataPack</span><span class="p">,</span> <span class="n">namespace</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pack</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">namespace</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="n">pack</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say hello"</span><span class="p">],</span> <span class="n">on_bind</span><span class="o">=</span><span class="n">on_bind</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function(content=['say hello'], source_path=None)
+DataPack(name=None, description='', pack_format=6)
+demo
+foo
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="merging">
+<h3>Merging<a class="headerlink" href="#merging" title="Permalink to this headline">¶</a></h3>
+<p>Because all the data stored in data packs is ultimately represented by file instances, <code class="docutils literal notranslate"><span class="pre">beet</span></code> can implement a very straight-forward merging strategy that lets conflicting files decide if they should overwrite or merge with existing ones. For example, tag files will be merged together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+<span class="n">p1</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say hello"</span><span class="p">],</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">"minecraft:tick"</span><span class="p">])</span>
+
+<span class="n">p2</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+<span class="n">p2</span><span class="p">[</span><span class="s2">"demo:bar"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say world"</span><span class="p">],</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">"minecraft:tick"</span><span class="p">])</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+
+<span class="nb">dict</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span>
+    <span class="s2">"demo:foo"</span><span class="p">:</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say hello"</span><span class="p">]),</span>
+    <span class="s2">"demo:bar"</span><span class="p">:</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say world"</span><span class="p">]),</span>
+    <span class="s2">"minecraft:tick"</span><span class="p">:</span> <span class="n">FunctionTag</span><span class="p">({</span><span class="s2">"values"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">,</span> <span class="s2">"demo:bar"</span><span class="p">]}),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>In resource packs, conflicting languages will preserve translations from both files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">ResourcePack</span><span class="p">()</span>
+<span class="n">p1</span><span class="p">[</span><span class="s2">"minecraft:custom"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Language</span><span class="p">({</span><span class="s2">"demo.foo"</span><span class="p">:</span> <span class="s2">"hello"</span><span class="p">})</span>
+
+<span class="n">p2</span> <span class="o">=</span> <span class="n">ResourcePack</span><span class="p">()</span>
+<span class="n">p2</span><span class="p">[</span><span class="s2">"minecraft:custom"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Language</span><span class="p">({</span><span class="s2">"demo.bar"</span><span class="p">:</span> <span class="s2">"world"</span><span class="p">})</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">languages</span><span class="p">[</span><span class="s2">"minecraft:custom"</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  "demo.foo": "hello",
+  "demo.bar": "world"
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="matching-key-patterns">
+<h3>Matching key patterns<a class="headerlink" href="#matching-key-patterns" title="Permalink to this headline">¶</a></h3>
+<p>The object hierarchy that represents data packs and resource packs contains dict-like objects that have a few extra utilities compared to regular Python dictionaries. Data packs, namespace containers and proxies are all dict-like objects with string keys that expose a <code class="docutils literal notranslate"><span class="pre">match</span></code> method that returns a set of all the keys matching the given patterns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">()</span>
+<span class="n">pack</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say hello"</span><span class="p">])</span>
+<span class="n">pack</span><span class="p">[</span><span class="s2">"demo:bar"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Function</span><span class="p">([</span><span class="s2">"say world"</span><span class="p">])</span>
+
+<span class="n">pack</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">"d*"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'demo'}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span><span class="p">[</span><span class="s2">"demo"</span><span class="p">]</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">"f*"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'foo'}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">"demo:*"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'demo:bar', 'demo:foo'}
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can specify multiple patterns. The exclamation mark lets you invert a pattern.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">"demo:*"</span><span class="p">,</span> <span class="s2">"!demo:foo"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'demo:bar'}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="file-handles">
+<h2>File handles<a class="headerlink" href="#file-handles" title="Permalink to this headline">¶</a></h2>
+<p>The core <code class="docutils literal notranslate"><span class="pre">beet</span></code> file handles make all the interactions with the filesystem lazy and as efficient as possible. They’re responsible for exposing files in their serialized or deserialized state transparently and avoiding deserialization entirely whenever possible. This allows <code class="docutils literal notranslate"><span class="pre">beet</span></code> to load data packs and resource packs with thousands of files instantly.</p>
+<div class="section" id="text-files-and-binary-files">
+<h3>Text files and binary files<a class="headerlink" href="#text-files-and-binary-files" title="Permalink to this headline">¶</a></h3>
+<p>The implementation defines a base <code class="docutils literal notranslate"><span class="pre">File</span></code> class that’s generic over the types of its serialized and deserialized representation. Files that inherit from <code class="docutils literal notranslate"><span class="pre">TextFileBase</span></code> store their serialized content as strings while files that inherit from <code class="docutils literal notranslate"><span class="pre">BinaryFileBase</span></code> store their serialized content as bytes. All concrete file types are then derived from one or the other. The most straight-forward concrete file types are <code class="docutils literal notranslate"><span class="pre">TextFile</span></code> and <code class="docutils literal notranslate"><span class="pre">BinaryFile</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">TextFile</span>
+
+<span class="n">TextFile</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TextFile(content='hello', source_path=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">BinaryFile</span>
+
+<span class="n">BinaryFile</span><span class="p">(</span><span class="sa">b</span><span class="s2">"</span><span class="se">\x00\x01\x02\x03</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BinaryFile(content=b'\x00\x01\x02\x03', source_path=None)
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can create files by providing the serialized or deserialized content to the constructor, or specifying a source path to an existing file. <code class="docutils literal notranslate"><span class="pre">TextFile</span></code> and <code class="docutils literal notranslate"><span class="pre">BinaryFile</span></code> are a bit special though because their serialized and deserialized state are identical.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">handle</span> <span class="o">=</span> <span class="n">TextFile</span><span class="p">(</span><span class="n">source_path</span><span class="o">=</span><span class="s2">"../examples/load_basic/beet.json"</span><span class="p">)</span>
+<span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TextFile(content=None, source_path='../examples/load_basic/beet.json')
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that this didn’t perform any filesystem operation. The file handle is still in an unloaded state. Accessing the content in one way or another will load the file and discard the source path.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  "data_pack": {
+    "load": ["src"]
+  }
+}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TextFile(content='{\n  "data_pack": {\n    "load": ["src"]\n  }\n}\n', source_path=None)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="file-states">
+<h3>File states<a class="headerlink" href="#file-states" title="Permalink to this headline">¶</a></h3>
+<p>File handles can be in three distinct states:</p>
+<ul>
+<li><p>Unloaded</p>
+<p>Files with a source path are unloaded. You can use the <code class="docutils literal notranslate"><span class="pre">ensure_source_path()</span></code> method to make sure that files are in an unloaded state and retrieve the source path.</p>
+</li>
+<li><p>Serialized</p>
+<p>Files with plain string or bytes content are treated as serialized. You can use the <code class="docutils literal notranslate"><span class="pre">ensure_serialized()</span></code> method to get the serialized content of the file no matter the state it’s currently in. Text files let you access the string content through the <code class="docutils literal notranslate"><span class="pre">text</span></code> attribute and binary files let you access the raw bytes through the <code class="docutils literal notranslate"><span class="pre">blob</span></code> attribute.</p>
+</li>
+<li><p>Deserialized</p>
+<p>Files with a content that’s different from a plain string or bytes are treated as deserialized. You can use the <code class="docutils literal notranslate"><span class="pre">ensure_deserialized()</span></code> method to get the deserialized content of the file no matter the state it’s currently in. Classes deriving from <code class="docutils literal notranslate"><span class="pre">TextFile</span></code> and <code class="docutils literal notranslate"><span class="pre">BinaryFile</span></code> will expose the most suited and practical deserialized representation depending on the type of file.</p>
+</li>
+</ul>
+<p>Most of the time, code that works with files doesn’t need to know about the state it’s currently in. If the file is already deserialized then accessing the deserialized representation will simply return the current content of the file, otherwise <code class="docutils literal notranslate"><span class="pre">beet</span></code> will transparently load the file if necessary and turn the string or bytes into the deserialized representation. The same thing happens when trying to access the string or bytes content. If the file is not loaded then <code class="docutils literal notranslate"><span class="pre">beet</span></code> will transparently load it on the fly and if the file is in its deserialized state it will automatically turn it into its serialized representation.</p>
+<p>The different states make it possible to optimize various operations. For instance, dumping an unloaded file to the filesystem results in a native file copy operation, so if you’re shuffling files around in a data pack you’re not incurring extra loading and parsing costs by using the provided abstractions. Similarly, if you’re using <code class="docutils literal notranslate"><span class="pre">beet</span></code> to zip a data pack the file handles won’t needlessly turn any of the files into their deserialized representation. Another example would be equality checks. If two files are unloaded and point to the same source path they’re considered equal.</p>
+</div>
+<div class="section" id="json-files">
+<h3>Json files<a class="headerlink" href="#json-files" title="Permalink to this headline">¶</a></h3>
+<p>With the <code class="docutils literal notranslate"><span class="pre">JsonFile</span></code> class we can play around and see the differences between the unloaded, serialized, and deserialized states.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">JsonFile</span>
+
+<span class="n">handle</span> <span class="o">=</span> <span class="n">JsonFile</span><span class="p">(</span><span class="n">source_path</span><span class="o">=</span><span class="s2">"../examples/load_basic/beet.json"</span><span class="p">)</span>
+<span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JsonFile(content=None, source_path='../examples/load_basic/beet.json')
+</pre></div>
+</div>
+</div>
+</div>
+<p>The file is currently unloaded. By accessing the <code class="docutils literal notranslate"><span class="pre">text</span></code> attribute, which is the same as calling the <code class="docutils literal notranslate"><span class="pre">ensure_serialized()</span></code> method, <code class="docutils literal notranslate"><span class="pre">beet</span></code> will load the file and return the string content.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  "data_pack": {
+    "load": ["src"]
+  }
+}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JsonFile(content='{\n  "data_pack": {\n    "load": ["src"]\n  }\n}\n', source_path=None)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see that now the content of the file holds the string representing the json file. Json files expose their deserialized content as a dictionary of plain Python objects. By accessing the <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute, which is the same as calling the <code class="docutils literal notranslate"><span class="pre">ensure_deserialized()</span></code> method, <code class="docutils literal notranslate"><span class="pre">beet</span></code> will parse the json and return the deserialized content.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">handle</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">"data_pack"</span><span class="p">][</span><span class="s2">"load"</span><span class="p">]</span>
+<span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JsonFile(content={'data_pack': {}}, source_path=None)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now the file is in its deserialized state, and any further code accessing the <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute will be able to operate directly on the parsed dictionary. However, accessing the <code class="docutils literal notranslate"><span class="pre">text</span></code> attribute will transform the file into its serialized state again.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  "data_pack": {}
+}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JsonFile(content='{\n  "data_pack": {}\n}\n', source_path=None)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The different states aren’t something you explicitly need to worry about in code that works with files but it’s good to keep in mind that it doesn’t play well with weird access patterns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">"data_pack"</span><span class="p">][</span><span class="s2">"pack_format"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">handle</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">"data_pack"</span><span class="p">][</span><span class="s2">"pack_format"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  "data_pack": {
+    "pack_format": 1
+  }
+}
+
+{
+  "data_pack": {
+    "pack_format": 2
+  }
+}
+
+{
+  "data_pack": {
+    "pack_format": 3
+  }
+}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you could’ve guessed, this kind of code is pretty problematic because even though it doesn’t look like there’s much going on, each iteration of the loop actually ends up parsing and serializing json.</p>
+</div>
+<div class="section" id="png-files">
+<h3>Png files<a class="headerlink" href="#png-files" title="Permalink to this headline">¶</a></h3>
+<p>Another example of files with really distinct unloaded, serialized and deserialized states are png files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">beet</span> <span class="kn">import</span> <span class="n">PngFile</span>
+
+<span class="n">handle</span> <span class="o">=</span> <span class="n">PngFile</span><span class="p">(</span><span class="n">source_path</span><span class="o">=</span><span class="s2">"../logo.png"</span><span class="p">)</span>
+<span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PngFile(content=None, source_path='../logo.png')
+</pre></div>
+</div>
+</div>
+</div>
+<p>As usual, the file starts out unloaded. Because images are binary files, we need to access the <code class="docutils literal notranslate"><span class="pre">blob</span></code> attribute to get the serialized content.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">blob</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x01\xea'
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now the file is loaded and isn’t linked to the original source file anymore.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">source_path</span> <span class="ow">is</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Accessing the <code class="docutils literal notranslate"><span class="pre">image</span></code> attribute will deserialize the file into a <code class="docutils literal notranslate"><span class="pre">PIL</span></code> image, which makes it possible to edit the image programmatically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">image</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/overview_71_0.png" src="../_images/overview_71_0.png"/>
+</div>
+</div>
+</div>
+<div class="section" id="files-and-data-packs">
+<h3>Files and data packs<a class="headerlink" href="#files-and-data-packs" title="Permalink to this headline">¶</a></h3>
+<p>The files used in data packs and resource packs are derived from the core file handles. For example, you can create function files from a source path, a string representing the content of the function, or a list of strings corresponding to the lines of the function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span> <span class="o">=</span> <span class="n">DataPack</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">"../examples/load_basic/src"</span><span class="p">)</span>
+<span class="n">pack</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function(content=None, source_path=PosixPath('/home/runner/work/beet/beet/examples/load_basic/src/data/demo/functions/foo.mcfunction'))
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, when we load an unzipped data pack all the files remain in their unloaded state. The moment we start interacting with the content of the function <code class="docutils literal notranslate"><span class="pre">beet</span></code> will load the file automatically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pack</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"say bar"</span><span class="p">)</span>
+<span class="n">pack</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">"demo:foo"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function(content=['say foo', 'say bar'], source_path=None)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../toolchain/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Toolchain documentation</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/overview.md.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">General overview</a><ul>
+<li><a class="reference internal" href="#data-packs-and-resource-packs">Data packs and resource packs</a><ul>
+<li><a class="reference internal" href="#object-hierarchy">Object hierarchy</a></li>
+<li><a class="reference internal" href="#namespaced-file-identifiers">Namespaced file identifiers</a></li>
+<li><a class="reference internal" href="#extra-files">Extra files</a></li>
+<li><a class="reference internal" href="#mcmeta-accessors">Mcmeta accessors</a></li>
+<li><a class="reference internal" href="#namespace-binding-callbacks">Namespace binding callbacks</a></li>
+<li><a class="reference internal" href="#merging">Merging</a></li>
+<li><a class="reference internal" href="#matching-key-patterns">Matching key patterns</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#file-handles">File handles</a><ul>
+<li><a class="reference internal" href="#text-files-and-binary-files">Text files and binary files</a></li>
+<li><a class="reference internal" href="#file-states">File states</a></li>
+<li><a class="reference internal" href="#json-files">Json files</a></li>
+<li><a class="reference internal" href="#png-files">Png files</a></li>
+<li><a class="reference internal" href="#files-and-data-packs">Files and data packs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

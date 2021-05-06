@@ -1,0 +1,8 @@
+index.md:5: [redirected permanently] http://discord.gg/QAFXFtZ to https://discord.com/invite/QAFXFtZ
+index.md:4: [redirected permanently] https://minecraft.gamepedia.com/Resource_Pack to https://minecraft.fandom.com/wiki/Resource_Pack
+index.md:4: [redirected permanently] https://minecraft.gamepedia.com/Data_Pack to https://minecraft.fandom.com/wiki/Data_Pack
+index.md:14: [redirected with See Other] https://youtu.be/QsnQncGxAAs to https://www.youtube.com/watch?v=QsnQncGxAAs&feature=youtu.be
+index.md:12: [redirected with See Other] https://youtu.be/LDvV4_l-PSc to https://www.youtube.com/watch?v=LDvV4_l-PSc&feature=youtu.be
+index.md:11: [redirected with See Other] https://youtu.be/fQ9up0ELPNE to https://www.youtube.com/watch?v=fQ9up0ELPNE&feature=youtu.be
+index.md:13: [redirected with See Other] https://youtu.be/XTzKmvHqd1g to https://www.youtube.com/watch?v=XTzKmvHqd1g&feature=youtu.be
+index.md:10: [redirected with See Other] https://youtu.be/JGrJTOhG3pY to https://www.youtube.com/watch?v=JGrJTOhG3pY&feature=youtu.be
